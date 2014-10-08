@@ -1,6 +1,9 @@
 module Spring
   module Commands
     class RSpec
+      def env(*)
+        ENV["RAILS_ENV"] || "test"
+      end
       def exec_name
         "rspec"
       end
